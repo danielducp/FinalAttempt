@@ -31,7 +31,7 @@ var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", input
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "AchesandPainsEncoded", inputColumnName: "AchesandPains"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "RunnyOrStuffyNoseEncoded", inputColumnName: "RunnyOrStuffyNose"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "SoreThroatEncoded", inputColumnName: "SoreThroat"))
-.Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "DiarrhoeaEncoded"git init, inputColumnName: "Diarrhoea"))
+.Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "DiarrhoeaEncoded", inputColumnName: "Diarrhoea"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "HeadachesEncoded", inputColumnName: "Headaches"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "ShortnessOfBreathEncoded", inputColumnName: "ShortnessOfBreath"))
 .Append(mlContext.Transforms.Concatenate("Features", "FeverEncoded", "FatigueEncoded", "CoughEncoded", "LossOfSensesEncoded", "SneezingEncoded",  "AchesandPainsEncoded", "RunnyOrStuffyNoseEncoded", "SoreThroatEncoded", "DiarrhoeaEncoded", "ShortnessOfBreathEncoded"))
