@@ -34,7 +34,7 @@ var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", input
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "DiarrhoeaEncoded", inputColumnName: "Diarrhoea"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "HeadachesEncoded", inputColumnName: "Headaches"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "ShortnessOfBreathEncoded", inputColumnName: "ShortnessOfBreath"))
-.Append(mlContext.Transforms.Concatenate("Features", "FeverEncoded", "FatigueEncoded", "CoughEncoded", "LossOfSensesEncoded", "SneezingEncoded",  "AchesandPainsEncoded", "RunnyOrStuffyNoseEncoded", "SoreThroatEncoded", "DiarrhoeaEncoded", "ShortnessOfBreathEncoded"))
+.Append(mlContext.Transforms.Concatenate("Features", "FeverEncoded", "FatigueEncoded", "CoughEncoded", "LossOfSensesEncoded", "SneezingEncoded",  "AchesandPainsEncoded", "RunnyOrStuffyNoseEncoded", "SoreThroatEncoded", "DiarrhoeaEncoded", "HeadachesEncoded", "ShortnessOfBreathEncoded"))
 
 .Append(mlContext.Regression.Trainers.FastTree());
 
